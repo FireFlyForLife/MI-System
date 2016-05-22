@@ -1,0 +1,11 @@
+{
+	"name" : "MI: Multi Item Systems",
+	"version" : "Glad Giraffe",
+	"path" : ".",
+	"dependencies" : [],
+	"metadata" : {
+		"author" : "FireFlyForLife",
+		"version" : "0.1",
+		"description" : "A mod that helps to handle a lot of storage from one place."
+	}
+}

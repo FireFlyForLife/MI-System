@@ -1,0 +1,61 @@
+{
+  "objectName" : "miconsole",
+  "objectType" : "container",
+  "colonyTags" : ["misc"],
+  "rarity" : "Rare",
+  "description" : "A Multi Item console, used to acces items in a MI system.",
+  "shortdescription" : "MI Console",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 1200,
+  
+  "printable" : false,
+
+  "inventoryIcon" : "MIConsoleIcon.png",
+  "orientations" : [
+    {
+      "image" : "MIConsole.png:<color>",
+
+      "imagePosition" : [-15, -16],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ],
+  
+  "scripts" : ["/scripts/penguinGUI/penguinGUI.lua", "/objects/generic/miconsole/miconsole.lua"],
+  "scriptDelta" : 5,
+  "interactionConfig" : {
+    "gui" : {
+      "background" : {
+        "zlevel" : 0,
+        "type" : "background",
+        "fileHeader" : "/interface/miconsole/consoleheader.png",
+        "fileBody" : "/interface/miconsole/consolebody.png"
+      },
+      "scriptCanvas" : {
+        "zlevel" : 1,
+        "type" : "canvas",
+        "rect" : [40, 45, 434, 254],
+        "captureMouseEvents" : true,
+        "captureKeyboardEvents" : true
+      },
+      "close" : {
+        "zlevel" : 2,
+        "type" : "button",
+        "base" : "/interface/cockpit/xup.png",
+        "hover" : "/interface/cockpit/xdown.png",
+        "pressed" : "/interface/cockpit/xdown.png",
+        "callback" : "close",
+        "position" : [419, 263],
+        "pressedOffset" : [0, -1]
+      }
+    },
+    "scripts" : ["/scripts/penguinGUI/penguinGUI.lua", "/interface/miconsole/miconsolegui.lua"],
+    "scriptDelta" : 5,
+    "scriptCanvas" : "scriptCanvas"
+  }
+}
